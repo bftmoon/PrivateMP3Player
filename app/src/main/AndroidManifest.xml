@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="nodo.privatemp3player">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/PrivateMP3ThemeDefault"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".UnlockActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".explorer.ExplorerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".preference.PreferenceActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".preference.SecurityPrefActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".preference.KeywordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".player_main.PlaylistActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".player_main.SongPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".preference.LoadingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".player_main.YourPainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".preference.InfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".player_main.MusicService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="false" />
+    </application>
+
+</manifest>

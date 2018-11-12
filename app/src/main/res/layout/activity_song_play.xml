@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    tools:context=".player_main.SongPlayActivity"
+    tools:layout_editor_absoluteY="81dp">
+    <!--???-->
+    <SeekBar
+        android:id="@+id/sbarTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+
+    <ImageButton
+        android:id="@+id/ibtnRand"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorNo"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_rand_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnPrev"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnPrev"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorNo"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_prev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnPlayPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibtnRand"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnPlayPause"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1.3"
+        android:backgroundTint="@color/colorNo"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibtnPrev"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnNext"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorNo"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnLoop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibtnPlayPause"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnLoop"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorNo"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/loop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibtnNext"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgAlbum"
+        android:layout_width="0dp"
+        android:layout_height="255dp"
+        android:src="@mipmap/notes"
+        app:layout_constraintBottom_toTopOf="@+id/sbarTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtCurrTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="00:00"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbarTime" />
+
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="00:00"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbarTime" />
+
+    <TextView
+        android:id="@+id/txtFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:maxHeight="50dp"
+        android:text="."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrTime" />
+
+    <TextView
+        android:id="@+id/txtSongNameAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:maxHeight="50dp"
+        android:text="."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFileName" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbarTime"
+        app:layout_constraintVertical_bias="0.476" />
+
+</android.support.constraint.ConstraintLayout>

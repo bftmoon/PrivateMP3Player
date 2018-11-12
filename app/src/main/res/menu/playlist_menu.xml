@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuSearch"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@mipmap/search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/search"
+        />
+
+    <item
+        android:id="@+id/menuUpdate"
+        android:checkable="false"
+        android:icon="@mipmap/update"
+        android:showAsAction="ifRoom"
+        android:title="@string/update_playlist"/>
+    <item
+        android:id="@+id/menuSettings"
+        android:checkable="false"
+        android:icon="@mipmap/settings"
+        android:showAsAction="ifRoom"
+        android:title="@string/settings"/>
+
+
+
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".preference.PreferenceActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/btnSync"
+        android:layout_width="130dp"
+        android:layout_height="116dp"
+        android:drawablePadding="10dp"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="@string/ask_logs"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInfo"
+        app:layout_constraintEnd_toStartOf="@+id/btnInfo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnInfo" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:drawableTop="@drawable/ic_info"
+        android:drawablePadding="10dp"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="@string/btn_info"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSync"
+        app:layout_constraintTop_toBottomOf="@+id/btnSecurity" />
+
+    <Button
+        android:id="@+id/btnOpenExplorer"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_storage"
+        android:drawablePadding="10dp"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="@string/btn_load_songs"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSecurity"
+        app:layout_constraintEnd_toStartOf="@+id/btnSecurity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSecurity" />
+
+    <Button
+        android:id="@+id/btnSecurity"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="45dp"
+        android:drawableTop="@drawable/ic_key"
+        android:drawablePadding="10dp"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="@string/btn_security"
+        app:layout_constraintBottom_toTopOf="@+id/btnInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnOpenExplorer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="164dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:src="@mipmap/engineering"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInfo"
+        tools:ignore="ContentDescription" />
+
+</android.support.constraint.ConstraintLayout>

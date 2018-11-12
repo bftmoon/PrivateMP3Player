@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#170a25</color>
+    <color name="colorElements">#411c60</color>
+    <!--<color name="colorElements">#24173e</color>-->
+
+    <color name="colorElementsSecond">#1a1135</color>
+    <color name="colorText">#e8e8e8</color>
+    <color name="colorNo">#00000000</color>
+    <color name="colorBackground">#121212</color>
+    <!--<array name="colors">-->
+        <!--<item>#9d0000</item>-->
+        <!--<item>#f1310b</item>-->
+        <!--<item>#ffb728</item>-->
+        <!--<item>#1daa24</item>-->
+        <!--<item>#FF8FE3DB</item>-->
+        <!--<item>#0f1180</item>-->
+        <!--<item>#411c60</item>-->
+        <!--<item>#130d43</item>-->
+        <!--<item>#121212</item>-->
+        <!--<item>#ffffff</item>-->
+    <!--</array>-->
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="PrivateMP3ThemeDefault" parent="android:Theme.Material" >
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorElements</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:colorForeground">@color/colorText</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:drawable">@color/colorPrimary</item>
+
+        <item name="android:textViewStyle">@android:style/TextAppearance.Medium</item>
+        <item name="android:buttonStyle">@style/PMP3Buttons</item>
+
+    </style>
+        <!-- Customize your theme here. -->
+
+    <style name="PMP3Buttons" parent="android:Widget.Button">
+        <item name="android:background">@drawable/button_rectangle</item>
+        <!--<item name="android:minHeight">48dip</item>-->
+        <!--<item name="android:minWidth">64dip</item>-->
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">17sp</item>
+        <!--<item name="android:textStyle">bold</item>-->
+    </style>
+
+</resources>

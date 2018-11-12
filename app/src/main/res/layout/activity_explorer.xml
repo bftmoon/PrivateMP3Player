@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".explorer.ExplorerActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/txtPath"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/ibtnChooseAll"
+        app:layout_constraintStart_toEndOf="@+id/ibtnUndo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--todo: make autosize when i update android-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewExplorer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ibtnOk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPath" />
+
+    <ImageButton
+        android:id="@+id/ibtnOk"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnCancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnCancel"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:scaleType="fitXY"
+        android:src="@mipmap/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibtnOk"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnUndo"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:scaleType="fitXY"
+        android:src="@mipmap/undo_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ibtnChooseAll"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:scaleType="fitXY"
+        android:src="@mipmap/choose_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</android.support.constraint.ConstraintLayout>
